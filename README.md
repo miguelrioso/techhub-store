@@ -86,6 +86,7 @@ A[Usuario] --> B[Vista - productos.php]
 B --> C[Controlador]
 C --> D[Modelo]
 D --> E[Base de Datos]
+```
 
 🔧 Endpoints / Funciones
 Usuario
