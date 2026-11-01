@@ -7,6 +7,14 @@ Users can sign up, log in, add products to a cart and place orders.
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/catalog.jpg" width="280" alt="Product catalog" />
+  <img src="screenshots/cart.jpg" width="280" alt="Shopping cart with two products" />
+  <img src="screenshots/checkout.jpg" width="280" alt="Login screen shown at checkout" />
+</p>
+
 ## Tech stack
 
 - PHP (OOP)
