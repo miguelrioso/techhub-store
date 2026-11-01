@@ -1,13 +1,15 @@
-# TechHub Store 🛒
+# TechHub Store
 
-## 📌 Descripción
-Sistema web de tienda online desarrollado en PHP utilizando arquitectura MVC.  
-Permite a los usuarios registrarse, iniciar sesión, agregar productos al carrito y realizar compras.
+## Description
+
+Online store web application built with PHP using the MVC architecture.
+Users can sign up, log in, add products to a cart and place orders.
 
 ---
 
-## 🚀 Tecnologías
-- PHP (POO)
+## Tech stack
+
+- PHP (OOP)
 - MySQL
 - HTML5, CSS3
 - JavaScript (AJAX)
@@ -15,96 +17,88 @@ Permite a los usuarios registrarse, iniciar sesión, agregar productos al carrit
 
 ---
 
-## ⚙️ Instalación
+## Installation
 
-1. Clonar repositorio o descargar proyecto
-2. Copiar carpeta en `htdocs`
-3. Iniciar Apache y MySQL en XAMPP
-4. Crear base de datos `techhub_store`
-5. Importar archivo `techhub_store.sql`
-6. Abrir en navegador:
+1. Clone the repository or download the project
+2. Copy the project folder into `htdocs`
+3. Start Apache and MySQL in XAMPP
+4. Create a database named `techhub_store`
+5. Import the `techhub_store.sql` file
+6. Open in your browser:
 
 http://localhost/techhub/public
 
 ---
 
-## 👤 Funcionalidades
+## Features
 
-- Registro de usuario
+- User registration
 - Login / Logout
-- Visualización de productos
-- Carrito de compras
-- Finalizar compra (genera orden en BD)
+- Product listing
+- Shopping cart
+- Checkout (creates an order in the database)
 
 ---
 
-## 🏗️ Arquitectura (MVC)
+## Architecture (MVC)
 
-- **Modelos:** acceso a datos (Usuario, Producto)
-- **Vistas:** interfaz (productos.php)
-- **Controladores:** lógica (ProductoController)
-
----
-
-## 🗄️ Base de Datos
-
-El sistema utiliza una base de datos MySQL llamada `techhub_store`.
-
-### Tablas principales:
-
-- **usuarios**
-  - Almacena información de los usuarios registrados (nombre, correo, contraseña encriptada).
-
-- **productos**
-  - Contiene los productos disponibles en la tienda (nombre, descripción, precio).
-
-- **ordenes**
-  - Registra cada compra realizada por un usuario.
-
-- **detalle_orden**
-  - Relaciona los productos con una orden específica, incluyendo la cantidad.
-
----
-
-## 📄 Script de Base de Datos
-
-El archivo `techhub_store.sql` incluido en el proyecto contiene:
-
-- Creación de todas las tablas necesarias
-- Relaciones entre tablas mediante claves foráneas
-- Inserción de datos de prueba (productos)
-
-Este archivo debe importarse en phpMyAdmin para que el sistema funcione correctamente.
-
----
-
-## 📊 Diagrama MVC
+- **Models:** data access (User, Product)
+- **Views:** user interface (productos.php)
+- **Controllers:** application logic (ProductoController)
 
 ```mermaid
 graph TD
-A[Usuario] --> B[Vista - productos.php]
-B --> C[Controlador]
-C --> D[Modelo]
-D --> E[Base de Datos]
+A[User] --> B[View - productos.php]
+B --> C[Controller]
+C --> D[Model]
+D --> E[Database]
 ```
 
-🔧 Endpoints / Funciones
-Usuario
--Registro de usuario
--Inicio de sesión
--Cierre de sesión
+---
 
-Productos
--Listado de productos desde la base de datos
+## Database
 
-Carrito
--Agregar producto
--Eliminar producto
--Vaciar carrito
+The system uses a MySQL database named `techhub_store`.
 
-Orden
--Finalizar compra (crea orden y detalle en base de datos)
+### Main tables
 
-✨ Autor
+- **usuarios**: registered users (name, email, hashed password).
+- **productos**: products available in the store (name, description, price).
+- **ordenes**: each purchase made by a user.
+- **detalle_orden**: links products to a specific order, including quantity.
 
-Miguel Ángel Rios Ojeda
+### Database script
+
+The `techhub_store.sql` file included in the project contains:
+
+- Creation of all required tables
+- Relationships between tables through foreign keys
+- Sample data (products)
+
+Import this file in phpMyAdmin for the system to work correctly.
+
+---
+
+## Functions by module
+
+**User**
+- Sign up
+- Log in
+- Log out
+
+**Products**
+- List products from the database
+
+**Cart**
+- Add product
+- Remove product
+- Empty cart
+
+**Order**
+- Checkout (creates an order and its details in the database)
+
+---
+
+## Author
+
+Miguel Ángel Rios
